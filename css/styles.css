@@ -1,0 +1,164 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block; /*add block properties*/
+    
+    /*always cover its container*/
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+body {
+    min-height: 100vh; /*use all the viewport*/
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /*defaul text style*/
+    font-family: sans-serif;
+    color: hsla(0, 0%, 100%, 0.75); 
+
+    background-color: hsl(233, 47%, 7%);
+}
+
+
+.text {
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7em;
+}
+
+.text--title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.color-white {
+    color: hsl(0, 0%, 100%);
+}
+
+.color-purple {
+    color: hsl(277, 64%, 61%);
+}
+
+.color-white-transparent {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+
+
+.card {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px;
+    background-color: hsl(244, 38%, 16%);
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.card__header {
+    position: relative;
+}
+
+.card__img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:hsla(275, 100%, 40%, 0.35);
+}
+
+.card__body {
+    margin: 30px;
+    text-align: center;
+}
+
+
+.card__footer {
+    margin: 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+}
+
+.card__stats {
+    text-align: center;
+}
+
+.card__number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.text--data-name {
+    font-family: 'Lexend Deca',sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+
+
+@media screen and (min-width: 500px){
+    .card__footer {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .card {
+        display: grid;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+    }
+
+    .card__header {
+        height: 100%;
+        width: 100%;
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+    }
+    
+    .card__body {
+        height: auto;
+        width: auto;
+    }
+
+    .card__footer {
+        height: auto;
+        width: auto;   
+    }
+}
+
+
+
+
+/*Frontend Mentor attributions*/
+.attribution {
+    padding: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
